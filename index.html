@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança Digital</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background: #101827;
+color: white;
+}
+
+header {
+background: #17243a;
+padding: 25px;
+text-align: center;
+border-bottom: 2px solid #00bfa6;
+}
+
+header h1 {
+color: #00d6b2;
+margin-bottom: 8px;
+}
+
+nav {
+background: #20314d;
+padding: 15px;
+text-align: center;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin: 12px;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #00d6b2;
+}
+
+.container {
+max-width: 950px;
+margin: auto;
+padding: 25px;
+}
+
+.card {
+background: #1b2b43;
+padding: 25px;
+border-radius: 12px;
+margin-bottom: 25px;
+box-shadow: 0 4px 12px #0005;
+}
+
+h2 {
+color: #00d6b2;
+margin-bottom: 18px;
+}
+
+p {
+line-height: 1.7;
+color: #d5deea;
+}
+
+input {
+width: 100%;
+padding: 13px;
+margin: 12px 0;
+border-radius: 7px;
+border: none;
+font-size: 16px;
+}
+
+button {
+padding: 12px 20px;
+background: #00bfa6;
+color: #10202c;
+border: none;
+border-radius: 7px;
+font-weight: bold;
+cursor: pointer;
+margin: 5px;
+}
+
+button:hover {
+background: #00e0c0;
+}
+
+.resultado {
+margin-top: 18px;
+padding: 15px;
+background: #263a56;
+border-radius: 8px;
+}
+
+.barra {
+width: 100%;
+height: 12px;
+background: #42516a;
+border-radius: 10px;
+margin: 15px 0;
+overflow: hidden;
+}
+
+.progresso {
+width: 0%;
+height: 100%;
+background: #00d6b2;
+transition: 0.4s;
+}
+
+ul {
+padding-left: 22px;
+line-height: 2;
+color: #d5deea;
+}
+
+.site {
+background: #263a56;
+padding: 15px;
+margin-top: 12px;
+border-radius: 8px;
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: #17243a;
+color: #aab8ca;
+}
+
+@media(max-width: 600px) {
+nav a {
+display: inline-block;
+margin: 7px;
+}
+
+.container {
+padding: 15px;
+}
+
+.card {
+padding: 18px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔐 SEGURANÇA DIGITAL</h1>
+<p>Proteja seus dados e navegue com segurança!</p>
+</header>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#senhas">Senhas</a>
+<a href="#sites">Sites seguros</a>
+<a href="#dicas">Dicas</a>
+</nav>
+
+<main class="container">
+
+<section class="card" id="inicio">
+<h2>O que é segurança digital?</h2>
+
+<p>
+Segurança digital é o conjunto de práticas e tecnologias
+utilizadas para proteger informações, dispositivos e dados
+pessoais contra acessos não autorizados e ameaças virtuais.
+</p>
+</section>
+
+<section class="card" id="senhas">
+
+<h2>🔑 Teste a segurança da sua senha</h2>
+
+<p>
+Digite uma senha fictícia para verificar sua força.
+Não utilize sua senha pessoal ou verdadeira.
+</p>
+
+<input type="password" id="senha"
+placeholder="Digite uma senha de teste">
+
+<button onclick="analisar()">Analisar senha</button>
+<button onclick="limpar()">Limpar</button>
+
+<div class="resultado">
+
+<h3 id="forca">Aguardando análise...</h3>
+
+<div class="barra">
+<div class="progresso" id="progresso"></div>
+</div>
+
+<p id="pontos">Pontuação: 0/5</p>
+<p id="entropia">Entropia: --</p>
+
+<ul id="criterios">
+<li>Comprimento mínimo de 12 caracteres</li>
+<li>Letras maiúsculas e minúsculas</li>
+<li>Números</li>
+<li>Símbolos especiais</li>
+<li>Sem sequências comuns</li>
+</ul>
+
+</div>
+</section>
+
+<section class="card" id="sites">
+
+<h2>🌐 Como identificar sites seguros?</h2>
+
+<p>
+Antes de fornecer informações pessoais, é importante
+observar alguns elementos do site.
+</p>
+
+<div class="site">
+<h3>HTTPS</h3>
+<p>Indica que a conexão entre o navegador e o site é criptografada.</p>
+</div>
+
+<div class="site">
+<h3>Certificado de segurança</h3>
+<p>Ajuda a verificar a identidade do site e a proteção da conexão.</p>
+</div>
+
+<div class="site">
+<h3>Endereço eletrônico</h3>
+<p>Confira se o domínio está escrito corretamente e não apresenta alterações suspeitas.</p>
+</div>
+
+<div class="site">
+<h3>Informações confiáveis</h3>
+<p>Verifique a reputação do site antes de realizar compras ou compartilhar dados.</p>
+</div>
+
+</section>
+
+<section class="card" id="dicas">
+
+<h2>🛡️ Dicas para se proteger</h2>
+
+<ul>
+<li>Utilize senhas diferentes para cada conta.</li>
+<li>Ative a autenticação em dois fatores.</li>
+<li>Não compartilhe dados pessoais com desconhecidos.</li>
+<li>Evite clicar em links suspeitos.</li>
+<li>Mantenha seus dispositivos atualizados.</li>
+<li>Utilize gerenciadores de senhas confiáveis.</li>
+</ul>
+
+</section>
+
+</main>
+
+<footer>
+<p>Projeto de Segurança Digital | Start by Alura</p>
+<p>Desenvolvido para fins educacionais.</p>
+</footer>
+
+<script>
+
+function analisar() {
+
+let senha = document.getElementById("senha").value;
+
+if (senha.length === 0) {
+alert("Digite uma senha fictícia!");
+return;
+}
+
+let pontos = 0;
+let lista = "";
+
+let verificacoes = [
+{
+nome: "Pelo menos 12 caracteres",
+teste: senha.length >= 12
+},
+{
+nome: "Letras maiúsculas e minúsculas",
+teste: /[A-Z]/.test(senha) && /[a-z]/.test(senha)
+},
+{
+nome: "Números",
+teste: /[0-9]/.test(senha)
+},
+{
+nome: "Símbolos especiais",
+teste: /[^A-Za-z0-9]/.test(senha)
+},
+{
+nome: "Sem sequências comuns",
+teste: !/(1234|abcd|qwerty|password|1111)/i.test(senha)
+}
+];
+
+verificacoes.forEach(item => {
+
+if (item.teste) {
+pontos++;
+lista += "<li style='color:#00d6b2'>✔ " + item.nome + "</li>";
+} else {
+lista += "<li style='color:#ff7777'>✘ " + item.nome + "</li>";
+}
+
+});
+
+let forca = "";
+let cor = "";
+
+if (pontos <= 2) {
+forca = "Senha fraca";
+cor = "#ff5555";
+} else if (pontos <= 4) {
+forca = "Senha moderada";
+cor = "#ffc04d";
+} else {
+forca = "Senha forte";
+cor = "#00d6b2";
+}
+
+document.getElementById("forca").innerText = forca;
+document.getElementById("forca").style.color = cor;
+
+document.getElementById("progresso").style.width =
+(pontos / 5 * 100) + "%";
+
+document.getElementById("progresso").style.background = cor;
+
+document.getElementById("pontos").innerText =
+"Pontuação: " + pontos + "/5";
+
+let conjunto = 0;
+
+if (/[a-z]/.test(senha)) conjunto += 26;
+if (/[A-Z]/.test(senha)) conjunto += 26;
+if (/[0-9]/.test(senha)) conjunto += 10;
+if (/[^A-Za-z0-9]/.test(senha)) conjunto += 32;
+
+let entropia = conjunto > 0
+? (senha.length * Math.log2(conjunto)).toFixed(2)
+: 0;
+
+document.getElementById("entropia").innerText =
+"Entropia teórica: " + entropia + " bits";
+
+document.getElementById("criterios").innerHTML = lista;
+
+}
+
+function limpar() {
+
+document.getElementById("senha").value = "";
+
+document.getElementById("forca").innerText =
+"Aguardando análise...";
+
+document.getElementById("forca").style.color = "white";
+
+document.getElementById("progresso").style.width = "0%";
+
+document.getElementById("pontos").innerText =
+"Pontuação: 0/5";
+
+document.getElementById("entropia").innerText =
+"Entropia: --";
+
+document.getElementById("criterios").innerHTML = `
+<li>Comprimento mínimo de 12 caracteres</li>
+<li>Letras maiúsculas e minúsculas</li>
+<li>Números</li>
+<li>Símbolos especiais</li>
+<li>Sem sequências comuns</li>
+`;
+
+}
+
+</script>
+
+</body>
+</html>
